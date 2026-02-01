@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates | Akash Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animations -->
+  <style>
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes bounceSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-menu.open { max-height: 300px; }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen overflow-x-hidden">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="sticky top-0 bg-white shadow-md px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center z-50">
+  <div class="flex justify-between items-center">
+    <h1 class="text-xl sm:text-2xl font-bold text-indigo-600">Portfolio.</h1>
+    <button id="menuBtn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 text-indigo-600" aria-label="Toggle menu">
+      <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div id="navLinks" class="mobile-menu sm:max-h-none sm:flex sm:gap-6 font-medium mt-4 sm:mt-0 flex-col sm:flex-row sm:items-center">
+    <a href="index.html" class="hover:text-indigo-600 py-2 sm:py-0">About Me</a>
+    <a href="projects.html" class="hover:text-indigo-600 py-2 sm:py-0">Projects</a>
+    <a href="certificates.html" class="text-indigo-600 py-2 sm:py-0">Certificates</a>
+    <a href="contact.html" class="hover:text-indigo-600 py-2 sm:py-0">Contact</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-20 sm:py-24">
+  <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 px-4 sm:px-6 lg:px-10">
+
+    <div>
+      <span class="inline-block mb-4 px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
+        Achievements
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
+        My <span class="text-indigo-600">Certificates</span>
+      </h1>
+
+      <p class="text-gray-600 max-w-xl">
+        These certifications reflect my continuous learning journey
+        and practical expertise in software development and AI.
+      </p>
+    </div>
+
+    <div class="flex justify-center lg:justify-end">
+      <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-xl"
+           style="animation: fadeSlide 1.2s ease-out forwards;">
+        <img src="images/dp3.jpg"
+             class="rounded-2xl w-full max-w-[320px] sm:max-w-[380px]"
+             alt="Akash">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-16 sm:mt-20 text-center text-gray-500 text-sm">
+    <p>Scroll down to see my achievements</p>
+    <div class="mt-2 text-indigo-500 text-xl"
+         style="animation: bounceSlow 1.8s infinite;">↓</div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES GRID ===== -->
+<section class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-20">
+  <h2 class="text-3xl font-semibold text-center mb-14">My Certifications</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+    <!-- Certificate Card -->
+    <div onclick="openModal('images/aws.png','Python Full Stack')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/aws.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Mongo DB</h3>
+        <p class="text-sm text-gray-500">Online</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c1.png','Django Training')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c1.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Joy of Computing using Python</h3>
+        <p class="text-sm text-gray-500">NPTEL</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c2.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c2.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Web Development Intern</h3>
+        <p class="text-sm text-gray-500">EVALBENCH</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c3.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c3.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Python 3.x</h3>
+        <p class="text-sm text-gray-500">Skill Rack</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c4.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c4.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">AI for Data Driven Mangement Excellence</h3>
+        <p class="text-sm text-gray-500">Udemey</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c5.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c5.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">SQL injection for Beginners</h3>
+        <p class="text-sm text-gray-500">SimpleLearn</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c6.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c6.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Data Analyst Bootcamp From Basics To Advance</h3>
+        <p class="text-sm text-gray-500">Udemey</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c7.png','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c7.png" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">C-Programming Course</h3>
+        <p class="text-sm text-gray-500">Skill Rack</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c8.jpeg','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c8.jpeg" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Python Full-Stack</h3>
+        <p class="text-sm text-gray-500">Livewire Institute</p>
+      </div>
+    </div>
+
+    <div onclick="openModal('images/c9.jpeg','Web Development')"
+         class="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="images/c9.jpeg" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <h3 class="font-semibold text-lg">Web Development Intern</h3>
+        <p class="text-sm text-gray-500">Digisailor</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MODAL ===== -->
+<div id="certificateModal"
+     class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-2 sm:p-4 overflow-y-auto">
+
+  <div class="bg-white rounded-2xl max-w-3xl w-full mx-2 sm:mx-6 relative
+              max-h-[95vh] sm:max-h-[90vh] overflow-y-auto my-auto">
+
+    <div class="sticky top-0 bg-white z-10 flex justify-between items-center py-3 sm:py-4 px-4 border-b gap-2">
+      <h3 id="modalTitle" class="text-lg sm:text-2xl font-semibold text-gray-800 truncate flex-1"></h3>
+
+      <button onclick="closeModal()"
+              class="flex-shrink-0 text-gray-400 hover:text-red-500 text-xl sm:text-2xl p-1">
+        ✕
+      </button>
+    </div>
+
+    <div class="p-4 sm:p-6">
+      <img id="modalImage" class="w-full rounded-xl shadow-lg" alt="Certificate">
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="text-center py-6 text-sm text-gray-500 bg-white">
+  © 2026 Akash Portfolio. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('menuIcon').classList.toggle('hidden');
+    document.getElementById('closeIcon').classList.toggle('hidden');
+  });
+
+  function openModal(img, title) {
+    document.getElementById("modalImage").src = "./" + img;
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("certificateModal").classList.remove("hidden");
+    document.getElementById("certificateModal").classList.add("flex");
+  }
+
+  function closeModal() {
+    document.getElementById("certificateModal").classList.add("hidden");
+    document.getElementById("certificateModal").classList.remove("flex");
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
