@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Akash Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animations -->
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-menu.open { max-height: 300px; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen w-full overflow-x-hidden">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="sticky top-0 bg-white shadow-md px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center z-50">
+    <div class="flex justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-bold text-indigo-600">Portfolio.</h1>
+      <button id="menuBtn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 text-indigo-600" aria-label="Toggle menu">
+        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="navLinks" class="mobile-menu sm:max-h-none sm:flex sm:gap-6 font-medium mt-4 sm:mt-0 flex-col sm:flex-row sm:items-center">
+      <a href="index.html" class="hover:text-indigo-600 py-2 sm:py-0">About Me</a>
+      <a href="projects.html" class="hover:text-indigo-600 py-2 sm:py-0">Projects</a>
+      <a href="certificates.html" class="hover:text-indigo-600 py-2 sm:py-0">Certificates</a>
+      <a href="contact.html" class="text-indigo-600 py-2 sm:py-0">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="w-full py-16 sm:py-24">
+    <div
+      class="max-w-screen-xl mx-auto
+             grid grid-cols-1 lg:grid-cols-2
+             gap-12 lg:gap-20
+             items-center
+             px-4 sm:px-8">
+
+      <!-- LEFT TEXT -->
+      <div style="animation: fadeUp 1.1s ease-out forwards;">
+        <span class="inline-block mb-4 px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
+          Contact
+        </span>
+
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
+          Get In <span class="text-indigo-600">Touch</span>
+        </h1>
+
+        <p class="text-gray-600 max-w-xl leading-relaxed text-base sm:text-lg">
+          I'm always open to discussing new projects, creative ideas,
+          collaborations, or opportunities to be part of your vision.
+        </p>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-xl"
+             style="animation: floatSlow 3.5s ease-in-out infinite;">
+          <img
+            src="images/dp1.jpg"
+            alt="Contact"
+            class="rounded-2xl w-[260px] sm:w-[320px] lg:w-[380px]" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT INFO ===== -->
+  <section class="w-full py-16 sm:py-20">
+    <div class="max-w-screen-lg mx-auto px-4 sm:px-8">
+
+      <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-12">
+        Contact Information
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+        <!-- Email -->
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 text-xl">
+            ✉
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Email</h3>
+          <p class="text-gray-600 break-all">akash1718j@gmail.com</p>
+        </div>
+
+        <!-- Phone -->
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+            📞
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Phone</h3>
+          <p class="text-gray-600">6374073238</p>
+        </div>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/akash-s-432785291/"
+           target="_blank"
+           class="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition block">
+
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
+            in
+          </div>
+          <h3 class="font-semibold text-lg mb-2">LinkedIn</h3>
+          <p class="text-gray-600 break-all">akash-s-432785291</p>
+        </a>
+
+        <!-- Location -->
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition">
+          <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-red-100 text-red-600 text-xl">
+            📍
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Location</h3>
+          <p class="text-gray-600 leading-relaxed">
+            82h Krishnarajapuram, 6th Street<br>
+            Thoothukudi – 2
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white text-center py-6 text-sm text-gray-500">
+    © 2026 Akash Portfolio. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('menuIcon').classList.toggle('hidden');
+      document.getElementById('closeIcon').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
+
