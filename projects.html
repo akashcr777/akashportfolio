@@ -7,7 +7,6 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
 
   <style>
     @keyframes fadeSlide {
@@ -27,117 +26,112 @@
 
 <body class="bg-gray-100 min-h-screen overflow-x-hidden">
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="sticky top-0 bg-white shadow-md px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center z-50">
-    <div class="flex justify-between items-center">
-      <h1 class="text-xl sm:text-2xl font-bold text-indigo-600">Portfolio.</h1>
-      <button id="menuBtn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 text-indigo-600" aria-label="Toggle menu">
-        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
+<!-- ===== NAVBAR ===== -->
+<nav class="sticky top-0 bg-white shadow-md px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center z-50">
+  
+  <div class="flex justify-between items-center">
+    <h1 class="text-xl sm:text-2xl font-bold text-indigo-600">Portfolio.</h1>
+
+    <button id="menuBtn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 text-indigo-600">
+      ☰
+    </button>
+  </div>
+
+  <div id="navLinks" class="mobile-menu sm:max-h-none sm:flex sm:gap-4 font-medium mt-4 sm:mt-0 flex-col sm:flex-row sm:items-center">
+    <a href="index.html" class="hover:text-indigo-600 py-2">About Me</a>
+    <a href="projects.html" class="text-indigo-600 py-2">Projects</a>
+    <a href="certificates.html" class="hover:text-indigo-600 py-2">Certificates</a>
+    <a href="contact.html" class="hover:text-indigo-600 py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="pt-10 sm:pt-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
+
+    <!-- LEFT TEXT -->
+    <div>
+      <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium">
+        Portfolio
+      </span>
+
+      <h1 class="text-4xl font-bold mt-4">
+        My <span class="text-indigo-600">Projects</span>
+      </h1>
+
+      <p class="text-gray-600 mt-4">
+        Real-world applications and dashboards built with modern technologies.
+      </p>
     </div>
-    <div id="navLinks" class="mobile-menu sm:max-h-none sm:flex sm:gap-4 md:gap-6 font-medium mt-4 sm:mt-0 flex-col sm:flex-row sm:items-center">
-      <a href="index.html" class="hover:text-indigo-600 py-2 sm:py-0">About Me</a>
-      <a href="projects.html" class="text-indigo-600 py-2 sm:py-0">Projects</a>
-      <a href="certificates.html" class="hover:text-indigo-600 py-2 sm:py-0">Certificates</a>
-      <a href="contact.html" class="hover:text-indigo-600 py-2 sm:py-0">Contact</a>
-    </div>
-  </nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="pt-8 sm:pt-16 lg:pt-32 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-    <div
-      class="w-full max-w-screen-xl mx-auto
-             grid grid-cols-1 lg:grid-cols-2
-             items-center gap-12
-             px-4 sm:px-8 lg:px-16
-             py-12 sm:py-20">
-
-      <!-- LEFT -->
-      <div>
-        <span class="inline-block mb-4 px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
-          Portfolio
-        </span>
-
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-          My <span class="text-indigo-600">Projects</span>
-        </h1>
-
-        <p class="text-gray-600 max-w-xl leading-relaxed text-sm sm:text-base">
-          A collection of live applications and real-world projects
-          built using modern technologies and data-driven solutions.
-        </p>
+    <!-- IMAGE -->
+    <div class="flex justify-center lg:justify-end">
+      <div class="bg-white p-4 rounded-3xl shadow-xl" style="animation: fadeSlide 1.2s ease;">
+        <img src="images/dp2.jpg" class="rounded-2xl w-64" alt="Projects">
       </div>
-
-      <!-- RIGHT IMAGE -->
-      <div class="flex justify-center lg:justify-end">
-        <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-xl"
-             style="animation: fadeSlide 1.2s ease-out forwards;">
-          <img
-            src="images/dp2.jpg"
-            alt="Projects"
-            class="rounded-2xl w-56 sm:w-64 md:w-72 lg:w-80" />
-        </div>
-      </div>
-
     </div>
 
-    <!-- SCROLL TEXT -->
-    <div class="mt-10 text-center text-gray-500 text-sm">
-      <p>Scroll down to explore my live projects</p>
-      <div class="mt-2 text-indigo-500 text-xl"
-           style="animation: bounceSlow 1.8s infinite;">↓</div>
+  </div>
+
+  <p class="text-center text-gray-500">Scroll down to explore</p>
+  <div class="text-center text-indigo-500 text-2xl" style="animation: bounceSlow 1.5s infinite;">↓</div>
+
+</section>
+
+<!-- ===== PROJECTS GRID ===== -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <!-- PROJECT 1 -->
+  <a href="https://app.powerbi.com/groups/me/reports/33438c14-bedd-4fa4-bb0d-ac68aafe50f6/8ab7f809336d3c1f890c"
+     target="_blank"
+     class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition duration-300">
+
+    <img src="images/project1.jpeg" class="h-52 w-full object-cover">
+
+    <div class="p-5">
+      <h3 class="text-lg font-semibold">E-Commerce Dashboard</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        Interactive Power BI dashboard for sales analytics.
+      </p>
     </div>
-  </section>
+  </a>
 
-  <!-- ===== PROJECTS GRID ===== -->
-  <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 py-16 sm:py-20">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+  <!-- PROJECT 2 -->
+  <a href="https://akashcr777.github.io/battery-shop/#/login"
+     target="_blank"
+     class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition duration-300">
 
-      <!-- Project Card -->
-      <a href="https://app.powerbi.com/groups/me/reports/33438c14-bedd-4fa4-bb0d-ac68aafe50f6/8ab7f809336d3c1f890c"
-         target="_blank"
-         class="bg-white rounded-xl shadow-lg overflow-hidden
-                hover:scale-105 hover:shadow-2xl transition cursor-pointer">
+    <img src="images/project2.png" class="h-52 w-full object-cover">
 
-        <img
-          src="images/project1.jpeg"
-          class="h-48 sm:h-52 w-full object-cover"
-          alt="E-Commerce Dashboard">
-
-        <div class="p-5 sm:p-6">
-          <h3 class="text-lg font-semibold mb-2">
-            E-Commerce Dashboard
-          </h3>
-          <p class="text-sm text-gray-600">
-            Interactive Power BI dashboard for sales and customer analytics.
-          </p>
-        </div>
-      </a>
-
-      <!-- Add more project cards here (same structure) -->
-
+    <div class="p-5">
+      <h3 class="text-lg font-semibold">Battery Shop Full Stack Website</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        MERN stack e-commerce website with authentication and MongoDB backend.
+      </p>
     </div>
-  </section>
+  </a>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-white text-center py-6 text-sm text-gray-500">
-    © 2026 Akash Portfolio. All rights reserved.
-  </footer>
+ 
 
-  <script>
-    document.getElementById('menuBtn').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-      document.getElementById('menuIcon').classList.toggle('hidden');
-      document.getElementById('closeIcon').classList.toggle('hidden');
-    });
-  </script>
+</div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-white text-center py-6 text-sm text-gray-500">
+  © 2026 Akash Portfolio. All rights reserved.
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+document.getElementById("menuBtn").onclick = function () {
+  document.getElementById("navLinks").classList.toggle("open");
+};
+</script>
 
 </body>
 </html>
-
 
