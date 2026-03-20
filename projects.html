@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Akash Portfolio</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -26,7 +25,6 @@
 
 <body class="bg-gray-100 min-h-screen overflow-x-hidden">
 
-<!-- ===== NAVBAR ===== -->
 <nav class="sticky top-0 bg-white shadow-md px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:justify-between sm:items-center z-50">
   
   <div class="flex justify-between items-center">
@@ -45,12 +43,10 @@
   </div>
 </nav>
 
-<!-- ===== HERO SECTION ===== -->
 <section class="pt-10 sm:pt-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-10 items-center">
 
-    <!-- LEFT TEXT -->
     <div>
       <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium">
         Portfolio
@@ -65,7 +61,6 @@
       </p>
     </div>
 
-    <!-- IMAGE -->
     <div class="flex justify-center lg:justify-end">
       <div class="bg-white p-4 rounded-3xl shadow-xl" style="animation: fadeSlide 1.2s ease;">
         <img src="images/dp2.jpg" class="rounded-2xl w-64" alt="Projects">
@@ -79,12 +74,10 @@
 
 </section>
 
-<!-- ===== PROJECTS GRID ===== -->
 <section class="max-w-6xl mx-auto px-6 py-16">
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- PROJECT 1 -->
   <a href="https://app.powerbi.com/groups/me/reports/33438c14-bedd-4fa4-bb0d-ac68aafe50f6/8ab7f809336d3c1f890c"
      target="_blank"
      class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition duration-300">
@@ -99,7 +92,6 @@
     </div>
   </a>
 
-  <!-- PROJECT 2 -->
   <a href="https://akashcr777.github.io/battery-shop/#/login"
      target="_blank"
      class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition duration-300">
@@ -114,18 +106,33 @@
     </div>
   </a>
 
- 
+  <a href="https://springcrud-g610.onrender.com/"
+     target="_blank"
+     class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-indigo-500">
+
+    <img src="images/todo-thumbnail.png" class="h-52 w-full object-cover" alt="Todo App Screenshot">
+
+    <div class="p-5">
+      <h3 class="text-lg font-semibold">Spring Boot Todo CRUD</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        A full-stack Todo application using Java Spring Boot, MySQL, and RESTful APIs deployed on Render.
+      </p>
+      <div class="mt-4 flex gap-2">
+         <span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded">Java</span>
+         <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded">Spring Boot</span>
+         <span class="text-[10px] bg-yellow-100 text-yellow-700 px-2 py-1 rounded">REST API</span>
+      </div>
+    </div>
+  </a>
 
 </div>
 
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer class="bg-white text-center py-6 text-sm text-gray-500">
   © 2026 Akash Portfolio. All rights reserved.
 </footer>
 
-<!-- Mobile Menu Script -->
 <script>
 document.getElementById("menuBtn").onclick = function () {
   document.getElementById("navLinks").classList.toggle("open");
@@ -134,4 +141,3 @@ document.getElementById("menuBtn").onclick = function () {
 
 </body>
 </html>
-
